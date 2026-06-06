@@ -84,9 +84,9 @@ python3 NMrecon.py --check-tools            # بررسی ابزارها
 | **Wayback URLs** | Historical URL harvest from Wayback Machine CDX API |
 | **Reports** | Dark-green HTML, structured JSON, plain-text |
 
-### Requirements
+### Requirements,(installed by setup.sh)
 
-**System tools** (installed by setup.sh):
+**System tools**:
 ```
 nmap  whois  dig  curl  git
 ```
