@@ -160,31 +160,10 @@ python3 NMrecon.py --check-tools
 | `udp` | Common UDP services (`-sU`) — needs root |
 | `vuln` | Vulnerability NSE scripts (`--script=vuln`) |
 
-### Project Structure
+### wordlists:
 
 ```
-NMrecon/
-├── NMrecon.py          ← Main entry point
-├── setup.sh            ← Automated setup
-├── requirements.txt
-├── README.md
-├── core/
-│   ├── banner.py       ← Matrix animation, print helpers, version
-│   └── config.py       ← Global config, signatures, nmap profiles
-├── modules/
-│   ├── dns_whois.py    ← WHOIS + DNS enum + AXFR probe
-│   ├── subdomain.py    ← Subdomain discovery + live check
-│   ├── portscan.py     ← Nmap port scanner
-│   ├── web_recon.py    ← HTTP/SSL/WAF/tech/Wayback/emails
-│   └── geo_ip.py       ← IP geolocation
-├── utils/
-│   ├── menu.py         ← Interactive Rich menu system
-│   ├── reporter.py     ← HTML / JSON / text reports
-│   ├── tool_check.py   ← Tool availability table
-│   └── ui.py           ← Tables, progress bars, spinners
-├── output/             ← Generated reports
-└── wordlists/
-    └── subdomains.txt  ← DNS brute-force wordlist
+subdomains.txt  ← DNS brute-force wordlist
     (defult subdomains is subdomains-top1million-20000.txt)
 ```
 
@@ -193,10 +172,10 @@ NMrecon/
 Reports are saved to `./output/` with a timestamped filename:
 
 ```
-output/
-├── example_com_20241215_143022.html   ← Dark green HTML report
-├── example_com_20241215_143022.json   ← Structured JSON
-└── example_com_20241215_143022.txt    ← Plain text
+output:
+example_com_20241215_143022.html   ← HTML report
+example_com_20241215_143022.json   ← Structured JSON
+example_com_20241215_143022.txt    ← Plain text
 ```
 
 ---
